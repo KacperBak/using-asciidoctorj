@@ -1,4 +1,26 @@
 = README
 
-== Descrition
+== Description
 Simple use cases of the Java based asciidoctor tool chain version `asciidoctorj`.
+This one can be installed with http://sdkman.io/[SDKMAN!]:
+....
+sdk install asciidoctorj
+....
+
+Verify the install with:
+....
+asciidoctorj --version
+....
+
+== asciidoctorj-pdf usage
+Change into the `asciidoctor-pdf` folder.
+....
+cd asciidoctor-pdf
+....
+
+Choose the `pdf` backend and use an **absolute** path for the `pdf-style` argument to apply the custom theme on the document `test.adoc`.
+....
+asciidoctorj -b pdf \
+-a pdf-style=/MyProjectPath/asciidoctor-pdf/resources/themes/kb-default-theme.yml \
+test.adoc
+....
